@@ -15,10 +15,10 @@ let cood (x,y) = (x,y);;
 
 isInCircle ( calcDistance (cood (Random.float 1.0 ,Random.float 1.0)));;
 
-let calcSum sumInCircle = if isInCircle ( calcDistance (cood (Random.float 1.0 ,Random.float 1.0))) = true
-  then sumInCircle +. 1. 
-  else sumInCircle;;
+let calcNumInCircle numInCircle  = if isInCircle ( calcDistance (cood (Random.float 1.0 ,Random.float 1.0))) = true
+  then numInCircle  +. 1. 
+  else numInCircle ;;
 
-let rec calcPi (cnt, res,num) = if cnt > 0 then calcPi (cnt - 1, calcSum res,num) else (res /. num /.4. );;
+let rec calcPi (cnt, res,num) = if cnt > 0 then calcPi (cnt - 1, calcNumInCircle res,num) else 4. *. (res /. num  );;
 
-calcPi (9999999 , 0.0,9999999.);;
+calcPi (99999 , 0.0,99999.);;
