@@ -13,8 +13,6 @@ let isInCircle distance = if distance < 1.0 then true else false;;
 
 let cood (x,y) = (x,y);;
 
-isInCircle ( calcDistance (cood (Random.float 1.0 ,Random.float 1.0)));;
-
 let calcNumInCircle numInCircle  = if isInCircle ( calcDistance (cood (Random.float 1.0 ,Random.float 1.0))) = true
   then numInCircle  +. 1. 
   else numInCircle ;;
